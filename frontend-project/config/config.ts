@@ -121,7 +121,20 @@ export default {
               name: 'letters',
               icon: 'FileTextOutlined',
               path: '/letters',
-              component: './letters/list',
+              routes: [
+                {
+                  name: 'new',
+                  icon: 'FileAddOutlined',
+                  path: '/letters/letter/add/',
+                  component: './django-admin-fallback',
+                },
+                {
+                  name: 'list',
+                  icon: 'FileTextOutlined',
+                  path: '/letters/list',
+                  component: './letters/list',
+                },
+              ],
             },
             {
               name: 'institutions',
